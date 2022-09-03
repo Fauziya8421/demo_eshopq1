@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 28px;
+    font-size: 1rem;
+} */
+
+.GM{
+    height: 90vh;
+   width: 90vw;
+   /* margin: 0.5rem auto; */
+    display: grid;
+    
+    /* grid-template-rows: 1fr 2fr ; */
+    grid-template-areas: "navbar"
+                        "section"
+                        "middlePart2"
+                        "middlePart3"
+                        "footer"
+                    
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fe016f;
+    /* background-image: url("p1.jpg"); */
+  }
+
+.navbar { 
+    /* grid-row: 1;  */
+    grid-area: navbar;
+    height: 55px;
+  }
+
+section{
+    grid-area: section;
+
+  position: relative;  
+  height: 450px;
+  width: 1350px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper{
+  width: 11150px;
+}
+
+.card{
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  margin: 10px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  z-index: 100;
+}
+
+
+
+section .card .image img{
+  height: 100%;
+  width: 100%;
+  /* object-fit: cover; */
+  /* border-radius: 50%; */
+  /* border: 8px solid #fff; */
+}
+
+
+/* .card .name-profession{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  /
+}
+
+.name-profession .name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.name-profession .profession{
+  font-size:15px;
+  font-weight: 500;
+} */
+.middle{
+  margin-top: 10px;
+}
+.bubble4 {
+  
+  position: relative;
+  width: 180px;
+  height: 40px;
+  background: #f55076;
+  border-radius: 20px;
+  border: none;
+}
+.bubble {
+  
+  position: relative;
+  width: 140px;
+  height: 35px;
+  background: #f55076;
+  border-radius: 20px;
+  border: none;
+}
+.bubble4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+    border-top-color: #f55076;
+    border-bottom: 0;
+    margin-left: -13px;
+    margin-bottom: -13px;
+  }
+
+
+.card .lastText{
+  width: 100%;
+  display: flex;
+  justify-content: space-around ;
+  margin-top: 20px;
+  cursor: pointer;
+  
+}
+
+.card .button a{
+  
+  
+  color: rgb(171, 167, 167);
+  
+  font-size: 14px;
+  transition: all 0.3s ease;
+ 
+}
+
+
+
+.swiper-pagination{
+  position: absolute;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: #FF676D;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  opacity: 0.7;
+  color: #FF676D;
+  transition: all 0.3s ease;
+}
+.swiper-button-prev{
+    left:  -10px;
+}
+.swiper-button-next{
+    right: -10px;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 1;
+  color: #FF676D;
+}
+.credit a{
+  text-decoration: none;
+  color: #FF676D;
+  font-weight: 800;
+  
+}
+.credit {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.middlePart2{
+  grid-area: middlePart2;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 120%;
+  box-shadow: 40px solid ;
+}
+.middlePart3{
+  grid-area: middlePart3;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 70px;
+  height: 80%;
+}
+nv li a {
+  float:left;
+  height:59px;
+  line-height:55px;
+  /* padding:0px 1px 0 2px; */
+  
+  color:rgb(255, 255, 255);
+  background-color:rgb(239, 22, 22);
+  text-align:center;
+  width:102%;
+  border-radius:5px
+}
+
+
+
+nv li a:after {
+  content:"";
+  float:left;
+  position:absolute;
+  top:-2.5px;
+  right:-38px;
+  width:0;
+  height:0;
+  
+  
+ border-top: 32px solid transparent;
+ border-left: 42px solid rgb(239, 22, 22);
+ border-bottom: 32px solid transparent;
+ border-radius: 10px;
+}
+
+nv li {
+  list-style-type:none;
+  width:201px;
+  position:relative;
+  margin-left: -12px;
+}
+
+nv li a {
+  text-decoration:none;
+}
+
+footer{
+  grid-area: footer;
+  margin-top: 45px;
+}
